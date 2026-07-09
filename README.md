@@ -37,9 +37,17 @@ for member in &ws.members {
 
 Pass `LoadOptions { resolve: true, .. }` when you need `linked_members` (the dependency graph); it's omitted by default for speed.
 
+## TUI chrome (feature `tui`)
+
+Enable the `tui` feature for a `chrome` module of shared terminal-UI vocabulary — the palette, status glyphs, brandmark, spinner, and render helpers (`brand_line`, `log_console`) — so the suite's tools stay visually consistent. It pulls `ratatui`; the discovery core above stays dependency-light without it.
+
+```toml
+portside = { version = "0.2", features = ["tui"] }
+```
+
 ## Scope
 
-v0.1 is workspace discovery only. The freight suite's other shared pieces — freshness/staleness heuristics, the background-job runner, and the TUI chrome (palette, list/detail/log layout) — are candidates for later releases as they prove out across more than one tool.
+The remaining shared pieces — freshness/staleness heuristics and the background-job runner — are candidates for later releases as they prove out across more than one tool.
 
 ## License
 

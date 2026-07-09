@@ -15,8 +15,13 @@
 //! # Ok::<(), portside::Error>(())
 //! ```
 //!
+//! Enable the `tui` feature for the shared [`chrome`] (palette, glyphs, brand,
+//! log console) used by the suite's terminal tools.
+//!
 //! [freight]: https://github.com/bornacvitanic/cargo-crane
 
+#[cfg(feature = "tui")]
+pub mod chrome;
 mod error;
 mod metadata;
 

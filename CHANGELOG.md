@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0] - 2026-07-09
+
+### Features
+
+- Add shared TUI chrome behind the `tui` feature
+
+A `chrome` module with the suite's palette, status glyphs, brandmark, spinner,
+and render helpers (`brand_line`, `log_console`) — the guardrail against
+palette/keybinding drift across the terminal tools. Gated behind the optional
+`tui` feature (pulling `ratatui`), so the discovery core stays dependency-light
+for non-TUI users.
+
 ## [0.1.0] - 2026-07-09
 
 ### Features
