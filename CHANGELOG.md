@@ -1,0 +1,16 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [0.1.0] - 2026-07-09
+
+### Features
+
+- Add portside: shared workspace-discovery core for the freight suite
+
+Turn a single `cargo metadata` call into a small, tool-agnostic model: the
+workspace root and target directory, the member packages with their targets
+(bin/lib) and declared dependencies (name, rename, version req, features,
+kind), and — optionally — the resolved dependency graph for computing the
+transitive workspace-member closure. JSON parsing is exposed separately from
+the cargo invocation so it can be tested against fixtures.
